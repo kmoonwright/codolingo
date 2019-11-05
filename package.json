@@ -8,7 +8,9 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "client-install": "npm install --prefix client",
     "client": "npm start --prefix client",
-    "server": "nodemon index.js"
+    "server": "nodemon index.js",
+    "start": "node index.js --prefix client",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
     "type": "git",

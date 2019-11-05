@@ -4,6 +4,7 @@ import SplashNav from '../nav/SplashNav';
 import SplashFooter from './splash_footer';
 import LoginModal from './login_modal';
 import RegisterModal from './register_modal';
+import { Link } from 'react-router-dom';
 
 import Ruby from '../../assets/ruby-logo.png';
 import JS from '../../assets/javascript-logo.png';

@@ -129,7 +129,7 @@ class LessonDetail extends React.Component {
                 return (
                   <div className="lesson-detail-page">
                     <div className="lesson-window">
-                      <div><h2>Title: {data.lesson.title}</h2></div>
+                      <div><h2>Current Lesson: {data.lesson.title}</h2></div>
                       <div><h3>Prompt: {questionCurrent.prompt}</h3></div>
                       <div id="terminal">
                         <div id="top-terminal-bar"></div>

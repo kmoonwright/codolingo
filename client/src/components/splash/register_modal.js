@@ -1,12 +1,13 @@
 import React from 'react';
 import {Mutation} from 'react-apollo';
-import {REGISTER_USER} from '../../graphql/mutations';
-import { withRouter } from 'react-router-dom';
+import {REGISTER_USER, LOGIN_USER} from '../../graphql/mutations';
+import { withRouter, Link } from 'react-router-dom';
 
 import Close from '../../assets/close.svg';
 
 class RegisterModal extends React.Component {
     constructor(props) {
+        //comment
         super(props);
         this.state = {email: "", password: "", name: "", _id: ""};
     }
@@ -66,6 +67,17 @@ class RegisterModal extends React.Component {
                             </div>
                             <button className="authButton" type="submit">Sign up</button>
                         </form>
+                        <button className="authButton"                         
+                            onClick={e => {
+                                e.preventDefault();
+                                registerUser({
+                                    variables: {
+                                        name: (Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)),
+                                        email: (Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)) + "@email.com",
+                                        password: 'password'
+                                    }
+                                });
+                            }}>Demo Login</button>
         
                         <div className="disclaimer">
                             <h5>By signing in to Codolingo, you agree to our Terms and Privacy Policy</h5>

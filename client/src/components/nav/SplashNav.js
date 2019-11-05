@@ -47,10 +47,10 @@ class SplashNav extends React.Component {
                             <div className="dropdownTriangle"></div>
                             <ul className="dropdownList">
                                 <li className="dropdownItem">
-                                    <button className="dropdownButton" onClick={this.props.toggleLoginModal}>Sign in</button>
+                                    <button className="dropdownButton" onClick={this.props.toggleRegisterModal}>Get started</button>
                                 </li>
                                 <li className="dropdownItem">
-                                    <button className="dropdownButton" onClick={this.props.toggleRegisterModal}>Get started</button>
+                                    <button className="dropdownButton" onClick={this.props.toggleLoginModal}>Sign in</button>
                                 </li>
                                 <li className="dropdownItem">Site language: English</li>
                             </ul>

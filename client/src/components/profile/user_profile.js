@@ -27,10 +27,9 @@ class ProfilePage extends React.Component {
                         if(error) console.log(error);
                         return (
                             <div>
-                                <h3>{`${data.user.name}, making great progress!`}</h3>
-                                <h3>Lessons:</h3>
+                                <h3>Progress Summary:</h3>
                             </div>
-                            )
+                        )
                     }}
                 </Query>
                 <Query query={FETCH_COURSES}>
